@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 const channelId = '1228586078982639656';
 const guildId = '1157418594649522268'; 
-const Url = 'https://www.youtube.com/watch?v=jfKfPfyJRdk'; 
+const Url = 'https://www.youtube.com/live/jfKfPfyJRdk?si=-7vhD-MEnvhUB4xR'; 
 
 client.on('ready', () => {
   console.log(`✅ | Logged in as ${client.user.tag}`);
@@ -67,5 +67,7 @@ async function joinAndPlayQuran(guildId, channelId) {
   player.on(AudioPlayerStatus.Playing, () => console.log('Playing Quran'));
   player.on('error', error => console.error(`Error: ${error.message}`));
 }
+
+
 
 client.login(process.env.TOKEN);
